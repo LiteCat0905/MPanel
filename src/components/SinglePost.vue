@@ -22,17 +22,19 @@ const id = computed(() => {
             <span>{{ props.post.body }}</span>
             <!-- eslint-disable vue/valid-v-for -->
             <br>
-            <n-tag v-for="item in post.tag" :bordered="false">#{{ item }}</n-tag>
+            <n-space>
+                <n-tag v-for="item in post.tag" :bordered="false">#{{ item }}</n-tag>
+            </n-space>
+
             <template #header-extra>
                 <span>{{ props.post.emoji }}</span>
             </template>
         </n-collapse-item>
     </n-space>
-
 </template>
 
 <style>
-.n-tag{
+.n-tag {
     margin-top: 10px;
 }
 </style>
